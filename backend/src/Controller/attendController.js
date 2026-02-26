@@ -4,7 +4,7 @@ const { formatTime } = require('../Utils/timFormater');
 
 const punchIn = async (req, res) => {
   try {
-    const today = new Date().toISOString().split("T")[0];
+    const today = new Date().toLocaleDateString("en-CA")
 
     const existing = await Attendance.findOne({
       userId: req.user.id,
@@ -38,7 +38,7 @@ const punchIn = async (req, res) => {
 
 const punchOut = async (req, res) => {
   try {
-    const today = new Date().toISOString().split("T")[0];
+    const today = new Date().toLocaleDateString("en-CA");
 
     const attendance = await Attendance.findOne({
       userId: req.user.id,
@@ -76,7 +76,7 @@ const punchOut = async (req, res) => {
 
 const freshBreakStart = async (req, res) => {
   try {
-    const today = new Date().toISOString().split("T")[0];
+    const today = new Date().toLocaleDateString("en-CA");
 
     const attendance = await Attendance.findOne({
       userId: req.user.id,
@@ -109,7 +109,7 @@ const freshBreakStart = async (req, res) => {
 
 const freshBreakEnd = async (req, res) => {
   try {
-    const today = new Date().toISOString().split("T")[0];
+    const today = new Date().toLocaleDateString("en-CA");
 
     const attendance = await Attendance.findOne({
       userId: req.user.id,
@@ -141,7 +141,7 @@ const freshBreakEnd = async (req, res) => {
 
 const getTodayAttendance = async (req, res) => {
   try {
-    const today = new Date().toISOString().split("T")[0];
+    const today = new Date().toLocaleDateString("en-CA");
 
     const attendance = await Attendance.findOne({
       userId: req.user.id,
