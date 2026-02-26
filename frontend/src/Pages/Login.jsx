@@ -42,7 +42,7 @@ export default function Login() {
     setError("");
 
     try {
-      const { data } = await API.post("/auth/login", {
+      const { data } = await API.get("/auth/login", {
         email,
         password,
       });
@@ -168,6 +168,7 @@ export default function Login() {
                   onFocus={() => setEmailFocused(true)}
                   onBlur={() => setEmailFocused(false)}
                   disabled={loading}
+                  className="status-color"
                 />
                 <div className="input-border"></div>
               </div>
@@ -184,6 +185,7 @@ export default function Login() {
                   onFocus={() => setPasswordFocused(true)}
                   onBlur={() => setPasswordFocused(false)}
                   disabled={loading}
+                  className="status-color"
                 />
                 <button 
                   type="button"

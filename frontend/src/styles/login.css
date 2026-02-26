@@ -754,3 +754,7 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.status-color{
+    color:#1f2937 ;
+}
