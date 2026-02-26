@@ -8,7 +8,7 @@ const app = express();
 database();
 
 app.use(cors({
-  origin: "https://attendence-pro.onrender.com",
+  origin: "https://attedence-master.vercel.app",
   credentials: true
 }));
 app.use(express.urlencoded({ extended : true }))
