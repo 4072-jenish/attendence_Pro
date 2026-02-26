@@ -214,7 +214,6 @@ export default function Dashboard() {
           </div>
         </div>
 
-        {/* Stats Overview */}
         <div className="stats-overview">
           <div className="stat-item total-work">
             <div className="stat-icon-wrapper">
@@ -241,13 +240,10 @@ export default function Dashboard() {
           </div>
         </div>
 
-        {/* Main Action Center */}
         <div className="action-center">
           <h2 className="section-title">Action Center</h2>
           
-          {/* Primary Actions */}
           <div className="primary-actions">
-            {/* Punch In Card */}
             <div 
               className={`action-card punch-in ${!todayData?.punchIn ? 'available' : 'disabled'}`}
               onClick={() => !todayData?.punchIn && handleAction('punchIn', 'punchIn', '✓ Punched In Successfully')}

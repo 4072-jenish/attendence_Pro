@@ -223,6 +223,21 @@ export default function Login() {
                     <ArrowRight size={20} className="button-icon" />
                   </>
                 )}
+              </button> 
+              
+              <button 
+                type="submit" 
+                className={`login-button ${loading ? 'loading' : ''}`}
+                disabled={loading}
+              >
+                {loading ? (
+                  <div className="loader"></div>
+                ) : (
+                  <>
+                    <span>Sign Up</span>
+                    <ArrowRight size={20} className="button-icon" />
+                  </>
+                )}
               </button>
             </form>
 
