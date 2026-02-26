@@ -8,7 +8,7 @@ const app = express();
 database();
 
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: "https://attendence-pro.onrender.com",
   credentials: true
 }));
 app.use(express.urlencoded({ extended : true }))
